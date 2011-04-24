@@ -107,6 +107,7 @@
     <Content Include="GettingStarted.html" />
     <Content Include="Global.asax" />
     <Content Include="humans.txt" />
+    <Content Include=".htaccess" />
     <Content Include="Tools\AjaxMin-License.txt" />
     <Content Include="Tools\AjaxMin.dll" />
     <Content Include="Tools\AjaxMin.exe" />

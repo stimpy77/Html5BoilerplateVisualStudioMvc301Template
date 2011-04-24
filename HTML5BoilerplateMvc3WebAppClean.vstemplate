@@ -82,6 +82,7 @@
       <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax">Global.asax</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax.cs">Global.asax.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="humans.txt">humans.txt</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName=".htaccess">htaccess.txt</ProjectItem>
       <Folder Name="Models" TargetFolderName="Models" />
       <ProjectItem ReplaceParameters="false" TargetFileName="post-build.bat">post-build.bat</ProjectItem>
       <Folder Name="Properties" TargetFolderName="Properties">
