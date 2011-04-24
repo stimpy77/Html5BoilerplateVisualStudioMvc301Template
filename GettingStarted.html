@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>HTML 5 Boilerplated Optimized Web App (clean)</title>
+    <link href="Content/html5boilerplate-site.css" rel="stylesheet" type="text/css" />
+    <link href="Content/style.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        body 
+        {
+            margin: 5px;
+        }
+        h1,h2,h3,h4,h5,h6,p,li
+        {
+            margin: 10px 0px;
+        }
+        h1
+        {
+            font-size: 18pt;
+        }
+        h2 
+        {
+            font-size: 16pt;
+        }
+        h3 
+        {
+            font-size: 14pt;
+        }
+        p,li
+        {
+            font-size: 11pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the HTML 5 Boilerplated Optimized ASP.NET MVC 3.01 Web App (clean)</h1>
+    <img src="Content/Images/apple-touch-icon-114x114-precomposed.png"  
+        style="height: 260px; width: 242px; float: right; margin-left: 5px;" />
+
+    <p>This Visual Studio project is based upon the clean HTML 5 boilerplate solution found at 
+        <a href="http://html5boilerplate.com">http://html5boilerplate.com</a>. 
+		This is not the first html5boilerplate.com based Visual 
+        Studio 2010 template to be produced, but as of this initial submission the other 
+        solutions focus on OpenID support rather than solely on purity and automated 
+        optimization. Other features such as OpenID can be added from NuGet, etc.</p>
+    <p>A few changes were made to the html5boilerplate.com solution in producing this template
+		in order to make this as clean and pragmatic for a .NET developer 
+        as possible. As html5boilerplate.com&#39;s solution utilizes Java-based tools for 
+        optimization, including:</p>
+    <ul>
+        <li>ant</li>
+        <li>YUI Compressor</li>
+        <li>et al</li>
+    </ul>
+    <p>
+        ... this implementation instead uses a post-build batch file (see 
+        post-build.bat) and Microsoft&#39;s Ajax Minifier which is included in the Tools 
+        directory. Should you choose to instead revert back to YUI Compressor or some 
+        other minifier tool (I might recommend Google Closure Compiler instead) you can 
+        feel free to modify the post-build.bat file to suit your preferences, including 
+        perhaps downloading and adding the html5boilerplate.com tools directory with its 
+        ant build.xml script, but of course any changes to the post-build script will 
+        require that you set up all dependencies and environment configurations as 
+        needed.</p>
+    <p>
+        Some key things to point out:</p>
+    <ol>
+        <li>Observe Scripts/app.js. This should be your application client-side script file. 
+            If you want to rename this file, or if you wish to add additional application 
+            logic scripts, you should update the post-build.bat file to reflect the file 
+            changes.</li>
+        <li>&nbsp;Take a look at Views/Shared/_Layout.cshtml, which acquired the bulk of 
+            html5boilerplate.com&#39;s index.html markup (plus added ASP.NET MVC 3 Razor 
+            semantics).
+            <ul>
+                <li>Note the Razor view sections that are rendered and where.</li>
+                <li>Note also the scripts section placeholder for page-specific scripts not handled 
+                    in the app.js file.</li>
+            </ul>
+        </li>
+        <li>Take a look at Views/Home/Index.cshtml. 
+            <ul>
+                <li>Note the Razor view sections that are populated. Execute the site to see how 
+                    this sample page is laid out with Views/Shared/_Layout.cshtml.</li>
+                <li>Note also the scripts section implementation for page-specific scripts not 
+                    handled in the app.js file.</li>
+            </ul>
+        </li>
+		<li>Due to the absence of proper documentation on how to use IVsPackageInstaller to invoke 
+			NuGet to install the MVC 3 Refresh dependency packages, you will need to install these 
+			packages manually if you wish them to be NuGet-managed. 
+			<ul>
+				<li>jQuery v1.5.1</li>
+				<li>jQuery.vsdoc v1.5.1</li>
+				<li>jQuery.Validation v1.8.0</li>
+				<li>jQuery.UI.Combined v1.8.11</li>
+				<li>EntityFramework v4.1.10331.0</li>
+				<li>Modernizr v1.7</li>
+			</ul>
+		</li>
+		<li>Entity Framework 4.1 is not 
+			referenced at all, so you will have to manually NuGet-install that no 
+			matter what if you intend to 
+			use it.</li>
+        <li>The <strong>post-build.bat</strong> file optimizes these files by default and/or deletes the 
+            optimized versions:<ul>
+                <li><strong>Content/html5boilerplate-site.css</strong><ul>
+                    <li>This file originated as html5boilerplate.com&#39;s css/style.css</li>
+                    <li>The optimized flavor of this file becomes <strong>
+                        Content/html5boilerplate-site.min.css</strong></li>
+                    </ul>
+                </li>
+                <li><strong>Content/html5boilerplate-handheld.css</strong><ul>
+                    <li>This file originated as html5boilerplate.com&#39;s css/handheld.css</li>
+                    <li>The optimized flavor of this file becomes <strong>
+                        Content/html5boilerplate-handheld.min.css</strong></li>
+                    </ul>
+                </li>
+                <li><strong>Content/style.css</strong><ul>
+                    <li>This is a clean .css file for your site that is loaded after the 
+                        html5boilerplate reset scripts</li>
+                    <li>The optimized flavor of this file becomes <strong>Content/style.min.css</strong></li>
+                    </ul>
+                </li>
+                <li><strong>Scripts/app.js</strong><ul>
+                    <li>This should contain your client-side application logic</li>
+                    <li>The optimized flavor of this file becomes <strong>Scripts/app.min.js</strong></li>
+                    </ul>
+                </li>
+                <li><strong>Scripts/app-plugins.js</strong><ul>
+                    <li>This file originated as html5boilerplate.com&#39;s js/plugins.js</li>
+                    <li>The optimized flavor of this file becomes <strong>Scripts/app-plugins.min.js</strong></li>
+                    </ul>
+                </li>
+                <li>All .png files located at <strong>Content/Images/*.png</strong><ul>
+                    <li>with optimized versions copied 
+                    to <strong>Content/Images/optimized/*.png</strong></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>The post-build.bat optimizations of .js and .css files are, by default, 
+            performed using <strong>Tools/AjaxMin.exe</strong> (Microsoft Ajax Minifier).</li>
+        <li>The post-build.bat optimizations of .png files are performed using 
+            <strong>Tools/optipng.exe</strong></li>
+        <li><strong>The default .css and .js files that are optimized are </strong> <em>
+            <strong>not</strong></em><strong> optimized 
+            while debugging locally</strong>, and this is by design.<ul>
+                <li>The optimized files are always generated. However,</li>
+                <li>web.config defines an application setting called UseMinifiedResources which is 
+                    false by default and set to true via web.Debug.config and web.Release.config 
+                    transformations during site packing and/or deployment, and</li>
+                <li>web.Debug.config transformations do not occur while debugging locally with F5 
+                    debugging.</li>
+                <li>Meanwhile, one would not want to debug optimized files in the first place!</li>
+            </ul>
+        </li>
+    </ol>
+
+    <p>
+        Alright, so have fun, and good luck.</p>
+    <p>
+        Jon Davis &lt;<a href="mailto:jon@jondavis.net">jon@jondavis.net</a>&gt;
+        <a href="http://www.jondavis.net/">http://www.jondavis.net/</a> &nbsp;</p>
+
+</body>
+</html>
